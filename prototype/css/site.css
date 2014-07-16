@@ -1,0 +1,17 @@
+html, body {
+	
+	/* disable text selection */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: moz-none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+body {
+	
+	background: url(../images/landing-bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
