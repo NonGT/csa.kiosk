@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html class="uk-height-1-1">
+<html class="uk-height-1-1" ng-app="csa">
 <head>
-<title>CSA Kiosk Prototype</title>
-<link rel="stylesheet" href="lib/uikit-2.8.0/css/uikit.css" />
-<link rel="stylesheet" href="css/site.css" />
+	<title>CSA Kiosk Prototype</title>
+	<link rel="stylesheet" href="lib/uikit-2.8.0/css/uikit.css" />
+	<link rel="stylesheet" href="css/site.css" />
+	<script type="text/javascript" src="lib/angular-1.2.16/angular.min.js"></script>
+	<script type="text/javascript" src="lib/angular-1.2.16/angular-animate.min.js"></script>
+	<script type="text/javascript" src="js/app/root.js"></script>
 </head>
 
-<body class="uk-height-1-1">
-	<div id="main-screen" class="uk-height-1-1 uk-vertical-align uk-text-center">
+<body class="uk-height-1-1" ng-controller="RootController" ng-click="nextScreen()">
+
+	<!-- Home Screen -->
+	<div class="uk-height-1-1 uk-vertical-align uk-text-center" ng-show="currentScreen == 'home'">
 		<div class="uk-vertical-align-middle">
 			<div class="uk-text-center">
 				<img src="images/logo.png" alt="CSA Service Solutions" />
@@ -27,7 +32,7 @@
 			</div>
 		</div>
 		<div class="n-guidance-container" class="uk-text-center">
-			<div class="n-guidance">
+			<div class="n-guidance-text">
 				TOUCH THE SCREEN TO BEGIN
 			</div>
 			<div class="n-guidance-pointer">
@@ -36,6 +41,38 @@
 			</div>
 		</div>
 	</div>
+	
+	<!-- Intro Screen -->
+	<div class="uk-height-1-1 uk-vertical-align uk-text-center" ng-show="currentScreen == 'intro'">
+		<div class="uk-vertical-align-middle">
+			<div class="uk-text-center">
+				<img src="images/logo.png" alt="CSA Service Solutions" />
+			</div>
+			<div class="uk-text-center" style="margin-top: 30px">
+				<img src="images/logo-title.png" />
+			</div>
+			<div class="n-intro-title n-margin-large-top">
+				Self-Order KIOSK
+			</div>
+			<div class="n-credit-cards n-margin-top">
+				<img src="images/card-master.png"/>
+				&nbsp;&nbsp;&nbsp;
+				<img src="images/card-amex.png"/>
+				&nbsp;&nbsp;&nbsp;
+				<img src="images/card-visa.png"/>
+			</div>
+		</div>
+		<div class="n-guidance-container" class="uk-text-center">
+			<div class="n-guidance-text">
+				TOUCH THE SCREEN TO BEGIN
+			</div>
+			<div class="n-guidance-pointer">
+				<div class="n-guidance-target"></div>
+				<img class="n-guidance-finger" src="images/finger.png"/>
+			</div>
+		</div>
+	</div>
+
 </body>
 
 </html>
