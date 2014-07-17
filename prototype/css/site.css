@@ -1,3 +1,128 @@
+@font-face {
+    font-family: 'hff_low_sunregular';
+    src: url('font/hff_low_sun-webfont.eot');
+    src: url('font/hff_low_sun-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/hff_low_sun-webfont.woff') format('woff'),
+         url('font/hff_low_sun-webfont.ttf') format('truetype');
+         
+    font-weight: normal;
+    font-style: normal;
+}
+
+@-webkit-keyframes puff {
+
+	from 
+	{ 
+		opacity: 1;
+		-webkit-transform: scale(1);
+	}
+	
+	to
+	{ 
+		opacity: 0;
+		-webkit-transform: scale(2);
+	}
+}
+
+@-ms-keyframes puff {
+
+	from 
+	{ 
+		opacity: 1;
+		-ms-transform: scale(1);
+	}
+	
+	to
+	{ 
+		opacity: 0;
+		-ms-transform: scale(2);
+	}
+}
+
+@-moz-keyframes puff {
+
+	from 
+	{ 
+		opacity: 1;
+		-moz-transform: scale(1);
+	}
+	
+	to
+	{ 
+		opacity: 0;
+		-moz-transform: scale(2);
+	}
+}
+
+@keyframes puff {
+
+	from 
+	{ 
+		opacity: 1;
+		transform: scale(1);
+	}
+	
+	to
+	{ 
+		opacity: 0;
+		transform: scale(2);
+	}
+}
+
+
+@-webkit-keyframes finger {
+
+	from 
+	{ 
+		-webkit-transform: translate(0px, 10px);
+	}
+	
+	to
+	{ 
+		-webkit-transform: translate(0px, 0px);
+	}
+}
+
+@-ms-keyframes finger {
+
+	from 
+	{ 
+		-ms-transform: translate(0px, 10px);
+	}
+	
+	to
+	{ 
+		-ms-transform: translate(0px, 0px);
+	}
+}
+
+@-moz-keyframes finger {
+
+	from 
+	{ 
+		-moz-transform: translate(0px, 10px);
+	}
+	
+	to
+	{ 
+		-moz-transform: translate(0px, 0px);
+	}
+}
+
+@keyframes finger {
+
+	from 
+	{ 
+		transform: translate(0px, 10px);
+	}
+	
+	to
+	{ 
+		transform: translate(0px, 0px);
+	}
+}
+
+
 html, body {
 	
 	/* disable text selection */
@@ -14,4 +139,117 @@ body {
 	background: url(../images/landing-bg.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+}
+
+body > * {
+	
+	position: relative;
+}
+
+.n-intro-title {
+	
+	font-family: 'hff_low_sunregular';	
+	font-size: 60px;
+	color: white;
+	text-shadow: 3px 3px 5px black;
+	margin-top: 60px;
+}
+
+.n-guidance-container {
+	
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	padding-bottom: 23px;
+}
+
+.n-guidance {
+	
+	display: inline-block;
+	text-transform: uppercase;
+	color: white;
+	font-size: 24px;
+	vertical-align: middle;
+}
+
+.n-guidance-target {
+
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background: url(../images/target.png);
+	
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation: puff 1s infinite;
+	-moz-animation-timing-function: ease-out;
+	-moz-animation: puff 1s infinite;
+	-ms-animation-timing-function: ease-out;
+	-ms-animation: puff 1s infinite;
+	animation-timing-function: ease-out;
+	animation: puff 1s infinite;
+	
+	-webkit-animation-delay: 0.5s;
+	-moz-animation-delay: 0.5s;
+	-ms-animation-delay: 0.5s;
+	animation-delay: 0.5s;
+}
+
+.n-guidance-finger {
+
+	z-index: 10;
+	position: absolute;
+	left: 0px;
+}
+
+.n-guidance-pointer {
+	
+	display: inline-block;
+	background: url(../images/target.png);
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+	margin-left: 30px;
+	position: relative;
+}
+
+.n-credit-cards {
+	
+	transform: scale(0.8);
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+}
+
+.n-margin-top {
+	
+	margin-top: 30px;
+}
+
+.n-guidance-finger {
+	
+	margin-left: 50%;
+	margin-top: 50%;
+
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation: finger 1s infinite;
+	-moz-animation-timing-function: ease-out;
+	-moz-animation: finger 1s infinite;
+	-ms-animation-timing-function: ease-out;
+	-ms-animation: finger 1s infinite;
+	animation-timing-function: ease-out;
+	animation: finger 1s infinite;
+}
+
+@media screen and (min-height: 1000px) {
+	
+	.n-margin-large-top {
+		
+		margin-top: 30%;
+	}
+	
+	.n-margin-top {
+		
+		margin-top: 20%;
+	}
 }
