@@ -122,6 +122,19 @@
 	}
 }
 
+@-webkit-keyframes horizontal-slide {
+
+	from 
+	{
+		background-position: -210px 0;
+	}
+	
+	to 
+	{
+		background-position: 210px 0;
+	}
+}
+
 
 html, body {
 	
@@ -139,6 +152,7 @@ body {
 	background: url(../images/landing-bg.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+	overflow: hidden;
 }
 
 body > * {
@@ -163,13 +177,48 @@ body > * {
 	padding-bottom: 23px;
 }
 
-.n-guidance {
+.n-guidance-well {
+	
+	background: -moz-linear-gradient(top, #010101, #181818);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0, #010101),color-stop(1, #181818));
+}
+
+.n-guidance-text {
 	
 	display: inline-block;
 	text-transform: uppercase;
 	color: white;
 	font-size: 24px;
 	vertical-align: middle;
+	
+	background: -moz-linear-gradient(left, #ffffff, 0.4, #ffffff, 0.5, #aaaaaa, 0.6, #ffffff, #ffffff); 
+	background: -webkit-gradient(
+					linear,
+					left top,
+					right top,
+					color-stop(0, #ffffff),
+					color-stop(0.4, #ffffff),
+					color-stop(0.5, #aaaaaa),
+					color-stop(0.6, #ffffff),
+					color-stop(1, #ffffff)); 
+	
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+	
+	-moz-text-fill-color: transparent;
+	-webkit-text-fill-color: transparent;
+	
+	-webkit-font-smoothing: antialiased;
+	-webkit-animation: horizontal-slide 3s infinite;
+	
+	font-family: "HelveticaNeue-Light", 
+				 "Helvetica Neue Light", 
+				 "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", "sans-serif";
+				 
+	font-weight: 300;
+	width: 420px;
+	
+	-webkit-text-size-adjust: none;
 }
 
 .n-guidance-target {
