@@ -9,10 +9,10 @@
 	<script type="text/javascript" src="js/app/root.js"></script>
 </head>
 
-<body class="uk-height-1-1" ng-controller="RootController" ng-click="nextScreen()">
+<body class="uk-height-1-1" ng-controller="RootController" ng-click="nextScreen()" ng-class="getBodyClass()">
 
 	<!-- Home Screen -->
-	<div class="uk-height-1-1 uk-vertical-align uk-text-center" ng-show="currentScreen == 'home'">
+	<div class="uk-height-1-1 uk-vertical-align uk-text-center ng-show" ng-show="currentScreen == 'home'">
 		<div class="uk-vertical-align-middle">
 			<div class="uk-text-center">
 				<img src="images/logo.png" alt="CSA Service Solutions" />
@@ -20,7 +20,7 @@
 			<div class="uk-text-center" style="margin-top: 30px">
 				<img src="images/logo-title.png" />
 			</div>
-			<div class="n-intro-title n-margin-large-top">
+			<div class="n-home-title n-margin-large-top">
 				Self-Order KIOSK
 			</div>
 			<div class="n-credit-cards n-margin-top">
@@ -43,23 +43,56 @@
 	</div>
 	
 	<!-- Intro Screen -->
-	<div class="uk-height-1-1 uk-vertical-align uk-text-center" ng-show="currentScreen == 'intro'">
-		<div class="uk-vertical-align-middle">
-			<div class="uk-text-center">
-				<img src="images/logo.png" alt="CSA Service Solutions" />
+	<div class="uk-height-1-1 uk-text-center n-intro-container" ng-show="currentScreen == 'intro'">
+		<div class="n-intro-bg"></div>
+		<div class="n-intro-title n-margin-top">
+			<div>ORDER</div>
+			<div>AND PAY</div>
+			<div>HERE</div>
+		</div>
+		<div class="n-intro-foods uk-text-center">
+			<div class="uk-grid uk-width-4-5 uk-display-inline-block">
+				<div class="uk-width-1-3 uk-text-center n-bounce">
+					<img src="images/intro-burger.png"/>
+				</div>
+				<div class="uk-width-1-3 uk-text-center n-bounce">
+					<img src="images/intro-taco.png"/>
+				</div>
+				<div class="uk-width-1-3 uk-text-center n-bounce">
+					<img src="images/intro-fish.png"/>
+				</div>
 			</div>
-			<div class="uk-text-center" style="margin-top: 30px">
-				<img src="images/logo-title.png" />
+		</div>
+		<div class="n-guidance-container" class="uk-text-center">
+			<div class="n-guidance-text">
+				TOUCH THE SCREEN TO BEGIN
 			</div>
-			<div class="n-intro-title n-margin-large-top">
-				Self-Order KIOSK
+			<div class="n-guidance-pointer">
+				<div class="n-guidance-target"></div>
+				<img class="n-guidance-finger" src="images/finger.png"/>
 			</div>
-			<div class="n-credit-cards n-margin-top">
-				<img src="images/card-master.png"/>
-				&nbsp;&nbsp;&nbsp;
-				<img src="images/card-amex.png"/>
-				&nbsp;&nbsp;&nbsp;
-				<img src="images/card-visa.png"/>
+		</div>
+	</div>
+	
+	<!-- Products Screen -->
+	<div class="uk-height-1-1 uk-text-center n-intro-container" ng-show="currentScreen == 'products'">
+		<div class="n-intro-bg"></div>
+		<div class="n-intro-title n-margin-top">
+			<div>ORDER</div>
+			<div>AND PAY</div>
+			<div>HERE</div>
+		</div>
+		<div class="n-intro-foods uk-text-center">
+			<div class="uk-grid uk-width-4-5 uk-display-inline-block">
+				<div class="uk-width-1-3 uk-text-center n-bounce">
+					<img src="images/intro-burger.png"/>
+				</div>
+				<div class="uk-width-1-3 uk-text-center n-bounce">
+					<img src="images/intro-taco.png"/>
+				</div>
+				<div class="uk-width-1-3 uk-text-center n-bounce">
+					<img src="images/intro-fish.png"/>
+				</div>
 			</div>
 		</div>
 		<div class="n-guidance-container" class="uk-text-center">

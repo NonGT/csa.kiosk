@@ -12,6 +12,11 @@
     	
 		$scope.currentScreen = screens[currentScreenIndex];
 		
+		$scope.getBodyClass = function getBodyClass() {
+			
+			return $scope.currentScreen + "-body";
+		};
+		
 		$scope.nextScreen = function nextScreen() {
 		
 			if(currentScreenIndex == screens.length - 1)

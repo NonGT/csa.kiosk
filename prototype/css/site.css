@@ -9,6 +9,17 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'kbsticktotheplanmedium';
+    src: url('font/kbsticktotheplan-webfont.eot');
+    src: url('font/kbsticktotheplan-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/kbsticktotheplan-webfont.woff') format('woff'),
+         url('font/kbsticktotheplan-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 @-webkit-keyframes puff {
 
 	from 
@@ -135,6 +146,46 @@
 	}
 }
 
+@-ms-keyframes horizontal-slide {
+
+	from 
+	{ 
+		background-position: -210px 0;
+	}
+	
+	to
+	{ 
+		background-position: 210px 0;
+	}
+}
+
+@-moz-keyframes horizontal-slide {
+
+	from 
+	{ 
+		background-position: -210px 0;
+	}
+	
+	to
+	{ 
+		background-position: 210px 0;
+	}
+}
+
+@keyframes horizontal-slide {
+
+	from 
+	{ 
+		background-position: -210px 0;
+	}
+	
+	to
+	{ 
+	
+		background-position: 210px 0;
+	}
+}
+
 
 html, body {
 	
@@ -149,18 +200,76 @@ html, body {
 
 body {
 	
+	background: #ab0030;
+}
+
+body > * {
+	
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+.ng-hide {
+
+	display: block !important;
+}
+
+.ng-show {
+	
+	opacity: 1;
+}
+
+body > .ng-animate.ng-hide-add, 
+body > .ng-animate.ng-hide-add.ng-hide-add-active {
+
+	-webkit-transition: 0.5s all; /* Chrome */
+	transition: 0.5s all;
+	
+	-webkit-transition-timing-function: cubic-bezier(.48,.62,.24,1.38);
+	transition-timing-function: cubic-bezier(.48,.62,.24,1.38);
+}
+
+body > *.ng-hide {
+
+	opacity: 0;
+	
+	transform: scale(2) rotate(30deg);
+	-webkit-transform: scale(5) rotate(30deg);
+	-moz-transform: scale(5) rotate(30deg);
+	-o-transform: scale(5) rotate(30deg);
+	-ms-transform: scale(5) rotate(30deg);
+}
+
+.n-bounce {
+	
+	-webkit-transition: 0.5s all; /* Chrome */
+	transition: 0.5s all;
+	
+	-webkit-transition-timing-function: cubic-bezier(.48,.62,.24,1.38);
+	transition-timing-function: cubic-bezier(.48,.62,.24,1.38);
+	
+	transform: scale(0);
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-o-transform: scale(0);
+	-ms-transform: scale(0);
+}
+
+/*************************************************************************************** 
+	Home 
+****************************************************************************************/
+
+.home-body {
+	
 	background: url(../images/landing-bg.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	overflow: hidden;
 }
 
-body > * {
-	
-	position: relative;
-}
-
-.n-intro-title {
+.n-home-title {
 	
 	font-family: 'hff_low_sunregular';	
 	font-size: 60px;
@@ -290,6 +399,138 @@ body > * {
 	animation: finger 1s infinite;
 }
 
+body > * {
+
+	-webkit-transition: 0.5s ease-out all; /* Chrome */
+	transition: 0.5s ease-out all;
+	opacity: 1;
+}
+
+/*************************************************************************************** 
+	Intro
+****************************************************************************************/
+
+.intro-body {
+	
+	background: url(../images/main-bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+.n-intro-title {
+	
+	font-family: 'kbsticktotheplanmedium';	
+	font-size: 120px;
+	color: white;
+	
+	letter-spacing: 1px;
+	text-shadow: 
+		3px 0 0 #791214, -3px 0 0 #791214, 
+		0 3px 0 #791214, 0 -3px 0 #791214, 
+		1px 1px #791214, -1px -1px 0 #791214, 
+		1px -1px 0 #791214, -1px 1px 0 #791214,
+
+		10px 0 0 rgba(249,207,0,0.5), -10px 0 0 rgba(249,207,0,0.5), 
+		9px 1px 0 rgba(249,207,0,0.5), -9px -1px 0 rgba(249,207,0,0.5), 
+		8px 2px 0 rgba(249,207,0,0.5), -8px -2px 0 rgba(249,207,0,0.5), 
+		7px 3px 0 rgba(249,207,0,0.5), -7px -3px 0 rgba(249,207,0,0.5), 
+		6px 4px 0 rgba(249,207,0,0.5), -6px -4px 0 rgba(249,207,0,0.5), 
+		5px 5px 0 rgba(249,207,0,0.5), -5px -5px 0 rgba(249,207,0,0.5), 
+		4px 6px 0 rgba(249,207,0,0.5), -4px -6px 0 rgba(249,207,0,0.5), 
+		3px 7px 0 rgba(249,207,0,0.5), -3px -7px 0 rgba(249,207,0,0.5), 
+		2px 8px 0 rgba(249,207,0,0.5), -2px -8px 0 rgba(249,207,0,0.5), 
+		1px 9px 0 rgba(249,207,0,0.5), -1px -9px 0 rgba(249,207,0,0.5), 
+		0 10px 0 rgba(249,207,0,0.5), 0 -10px 0 rgba(249,207,0,0.5), 
+		
+		9px -1px 0 rgba(249,207,0,0.5), -9px 1px 0 rgba(249,207,0,0.5),
+		8px -2px 0 rgba(249,207,0,0.5), -8px 2px 0 rgba(249,207,0,0.5),
+		7px -3px 0 rgba(249,207,0,0.5), -7px 3px 0 rgba(249,207,0,0.5),
+		6px -4px 0 rgba(249,207,0,0.5), -6px 4px 0 rgba(249,207,0,0.5),
+		5px -5px 0 rgba(249,207,0,0.5), -5px 5px 0 rgba(249,207,0,0.5),
+		4px -6px 0 rgba(249,207,0,0.5), -4px 6px 0 rgba(249,207,0,0.5),
+		3px -7px 0 rgba(249,207,0,0.5), -3px 7px 0 rgba(249,207,0,0.5),
+		2px -8px 0 rgba(249,207,0,0.5), -2px 8px 0 rgba(249,207,0,0.5),
+		1px -9px 0 rgba(249,207,0,0.5), -1px 9px 0 rgba(249,207,0,0.5);
+		
+	margin-top: 60px;
+	line-height: 120px;
+	
+	transform: scale(0.7);
+	-webkit-transform: scale(0.7);
+	-moz-transform: scale(0.7);
+	-o-transform: scale(0.7);
+	-ms-transform: scale(0.7);
+}
+
+.n-intro-container .n-intro-bg {
+
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	background: url(../images/sun-beams.png);
+	background-size: cover;
+	background-position: center center;
+
+	-webkit-transition: 2s ease-out all; /* Chrome */
+	transition: 2s ease-out all;
+
+	transform: scale(3) rotate(-50deg);
+	-webkit-transform: scale(3) rotate(-50deg);
+	-moz-transform: scale(3) rotate(-50deg);
+	-o-transform: scale(3) rotate(-50deg);
+	-ms-transform: scale(3) rotate(-50deg);
+}
+
+.intro-body > .n-intro-container .n-intro-bg {
+	
+	transform: scale(1) rotate(0deg);
+	-webkit-transform: scale(1) rotate(0deg);
+	-moz-transform: scale(1) rotate(0deg);
+	-o-transform: scale(1) rotate(0deg);
+	-ms-transform: scale(1) rotate(0deg);
+}
+
+.n-intro-foods {
+	
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.n-intro-title div:nth-child(2) {
+	
+	font-size: 72px;
+}
+
+.intro-body .n-bounce {
+	
+	transform: scale(1);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+}
+
+.intro-body .n-bounce:nth-child(1) {
+	
+	-webkit-transition-delay: 0.5s;
+	transition-delay: 0.5s;
+}
+
+.intro-body .n-bounce:nth-child(2) {
+	
+	-webkit-transition-delay: 0.8s;
+	transition-delay: 0.8s;
+}
+
+.intro-body .n-bounce:nth-child(3) {
+	
+	-webkit-transition-delay: 1.1s;
+	transition-delay: 1.1s;
+}
+
 @media screen and (min-height: 1000px) {
 	
 	.n-margin-large-top {
@@ -300,5 +541,20 @@ body > * {
 	.n-margin-top {
 		
 		margin-top: 20%;
+	}
+	
+	.n-credit-cards,
+	.n-intro-title {
+		
+		transform: scale(1);
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-o-transform: scale(1);
+		-ms-transform: scale(1);
+	}
+	
+	.n-intro-foods {
+		
+		margin-top: 5%;
 	}
 }
