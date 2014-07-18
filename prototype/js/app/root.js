@@ -7,7 +7,7 @@
     .controller('RootController', ['$http', '$rootScope', '$scope', '$location', 
     	function ($http, $rootScope, $scope, $location) {
     	
-    	var screens = ["home", "intro"];
+    	var screens = ["home", "intro", "products"];
     	var currentScreenIndex = 0;
     	
 		$scope.currentScreen = screens[currentScreenIndex];

@@ -242,6 +242,13 @@ body > *.ng-hide {
 	-ms-transform: scale(5) rotate(30deg);
 }
 
+body > * {
+
+	-webkit-transition: 0.5s ease-out all; /* Chrome */
+	transition: 0.5s ease-out all;
+	opacity: 1;
+}
+
 .n-bounce {
 	
 	-webkit-transition: 0.5s all; /* Chrome */
@@ -257,25 +264,9 @@ body > *.ng-hide {
 	-ms-transform: scale(0);
 }
 
-/*************************************************************************************** 
-	Home 
-****************************************************************************************/
-
-.home-body {
+.n-margin-top {
 	
-	background: url(../images/landing-bg.png);
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	overflow: hidden;
-}
-
-.n-home-title {
-	
-	font-family: 'hff_low_sunregular';	
-	font-size: 60px;
-	color: white;
-	text-shadow: 3px 3px 5px black;
-	margin-top: 60px;
+	margin-top: 30px;
 }
 
 .n-guidance-container {
@@ -370,20 +361,6 @@ body > *.ng-hide {
 	position: relative;
 }
 
-.n-credit-cards {
-	
-	transform: scale(0.8);
-	-webkit-transform: scale(0.8);
-	-moz-transform: scale(0.8);
-	-o-transform: scale(0.8);
-	-ms-transform: scale(0.8);
-}
-
-.n-margin-top {
-	
-	margin-top: 30px;
-}
-
 .n-guidance-finger {
 	
 	margin-left: 50%;
@@ -399,11 +376,34 @@ body > *.ng-hide {
 	animation: finger 1s infinite;
 }
 
-body > * {
+/*************************************************************************************** 
+	Home 
+****************************************************************************************/
 
-	-webkit-transition: 0.5s ease-out all; /* Chrome */
-	transition: 0.5s ease-out all;
-	opacity: 1;
+.home-body {
+	
+	background: url(../images/landing-bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+.home-body .n-home-title {
+	
+	font-family: 'hff_low_sunregular';	
+	font-size: 60px;
+	color: white;
+	text-shadow: 3px 3px 5px black;
+	margin-top: 60px;
+}
+
+.home-body .n-credit-cards {
+	
+	transform: scale(0.8);
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	-ms-transform: scale(0.8);
 }
 
 /*************************************************************************************** 
@@ -418,7 +418,7 @@ body > * {
 	overflow: hidden;
 }
 
-.n-intro-title {
+.intro-body .n-intro-title {
 	
 	font-family: 'kbsticktotheplanmedium';	
 	font-size: 120px;
@@ -492,14 +492,14 @@ body > * {
 	-ms-transform: scale(1) rotate(0deg);
 }
 
-.n-intro-foods {
+.intro-body .n-intro-foods {
 	
 	position: absolute;
 	width: 100%;
 	height: 100%;
 }
 
-.n-intro-title div:nth-child(2) {
+.intro-body .n-intro-title div:nth-child(2) {
 	
 	font-size: 72px;
 }
@@ -531,6 +531,57 @@ body > * {
 	transition-delay: 1.1s;
 }
 
+/*************************************************************************************** 
+	Products
+****************************************************************************************/
+
+.products-body {
+	
+	background: url(../images/products-bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+.products-body .n-products-title {
+
+	font-family: 'hff_low_sunregular';	
+	font-size: 48px;
+	color: white;
+	text-shadow: 3px 3px 5px black;
+	margin-top: 30px;
+	margin-left: 20px;
+	text-align: left;
+}
+
+.n-slip-container {
+
+    position: absolute;
+    padding: 8px 8px 32px 8px;
+    background: #ffffff;
+    top: 20px;
+    bottom: 100px;
+    left: 0px;
+    right: 20px;
+}
+	 
+.n-slip-container:after {
+    background: 
+    	linear-gradient(-45deg, #de1836 16px, transparent 0), 
+    	linear-gradient(45deg, #de1836 16px, transparent 0);
+    	
+    background-position: left-bottom;
+    background-repeat: repeat-x;
+    background-size: 32px 32px;
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 32px;
+}
+
 @media screen and (min-height: 1000px) {
 	
 	.n-margin-large-top {
@@ -543,8 +594,8 @@ body > * {
 		margin-top: 20%;
 	}
 	
-	.n-credit-cards,
-	.n-intro-title {
+	.home-body .n-credit-cards,
+	.intro-body .n-intro-title {
 		
 		transform: scale(1);
 		-webkit-transform: scale(1);
@@ -553,7 +604,7 @@ body > * {
 		-ms-transform: scale(1);
 	}
 	
-	.n-intro-foods {
+	.intro-body .n-intro-foods {
 		
 		margin-top: 5%;
 	}
